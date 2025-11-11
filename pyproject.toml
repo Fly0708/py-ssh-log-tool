@@ -1,0 +1,23 @@
+[project]
+name = "py-ssh-log-tool"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "paramiko>=4.0.0",
+    "typer>=0.20.0",
+    "python-dotenv>=1.0.0",
+    "dotenv>=0.9.9",
+    "asyncssh>=2.21.1",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["async_main2", "async_main", "main"]
+
+[project.scripts]
+nestle-ssh-log = "async_main2:app"
